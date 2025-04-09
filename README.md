@@ -37,4 +37,22 @@ A project to demonstrate Infrastructure as Code with Ansible, managing web serve
     ```bash
     vagrant halt
     vagrant destroy -f
-    
+
+### Diagram
+Below is a simple diagram of the infrastructure managed by this project:
+```mermaid
+flowchart TD
+    monitor01["monitor01 (Monitoring)<br>127.0.0.1:2202"]
+    web01["web01 (Nginx)<br>127.0.0.1:2222"]
+    web02["web02 (Nginx)<br>127.0.0.1:2200"]
+    db01["db01 (PostgreSQL)<br>127.0.0.1:2201"]
+
+    monitor01 --> web01
+    monitor01 --> web02
+    monitor01 --> db01
+    web01 <--> db01
+    web02 <--> db01
+```
+* **web01**, **web02**: Web servers running Nginx.
+* **db01**: Database server running PostgreSQL.
+* **monitor01**: Monitoring server with basic tools like `htop`.
