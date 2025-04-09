@@ -39,7 +39,7 @@ A project to demonstrate Infrastructure as Code with Ansible, managing web serve
     vagrant destroy -f
 
 ### Diagram
-Below is a simple diagram of the infrastructure managed by this project:
+Below is a diagram illustrating the intended infrastructure design for this project. It shows how the nodes could interact after setting up the necessary connections, such as configuring the web servers to connect to the database and enabling the monitoring node to observe the others.
 ```mermaid
 flowchart TD
     monitor01["monitor01 (Monitoring)<br>127.0.0.1:2202"]
