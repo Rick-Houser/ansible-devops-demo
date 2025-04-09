@@ -1,0 +1,4 @@
+---
+env: development
+app_name: ansible-demo
+app_version: 1.0.0
