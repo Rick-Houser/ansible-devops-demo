@@ -29,11 +29,11 @@ A project to demonstrate Infrastructure as Code with Ansible, managing web serve
     chmod 600 .vault_pass.txt
     ```
     Replace `mysecretpassword123` with a strong password.
-5. **Start Vagrant VMs and Run the Playbook:
+5. **Start Vagrant VMs and Run the Playbook**:
     ```bash
     vagrant up
     ansible-playbook playbooks/site.yml
-6. **Clean Up:
+6. **Clean Up**:
     ```bash
     vagrant halt
     vagrant destroy -f
