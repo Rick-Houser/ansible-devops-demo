@@ -1,0 +1,6 @@
+---
+- name: Install postgresql
+  ansible.builtin.package:
+    name: postgresql
+    state: present
+  become: true
