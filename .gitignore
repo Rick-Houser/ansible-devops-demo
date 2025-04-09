@@ -1,0 +1,5 @@
+*.retry
+*.pyc
+.vault_pass.txt
+.env
+.vagrant
