@@ -1,0 +1,20 @@
+---
+- name: Apply common configuration to all nodes
+  hosts: all
+  roles:
+    - common
+
+- name: Configure web servers
+  hosts: webservers
+  roles:
+    - web_server
+
+- name: Configure database servers
+  hosts: databases
+  roles:
+    - database
+
+- name: Configure monitoring
+  hosts: monitoring
+  roles:
+    - monitoring
